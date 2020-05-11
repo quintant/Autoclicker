@@ -76,7 +76,6 @@ def clicker():
             mouse.release(Button.left)
 
 
-
 y = False
 x = threading.Thread(target=clicker, daemon=True)
 
@@ -103,8 +102,3 @@ with keyboard.Listener(
         on_press=on_press,
         on_release=on_release) as listener:
     listener.join()
-
-listener = keyboard.Listener(
-    on_press=on_press,
-    on_release=on_release)
-listener.start()
